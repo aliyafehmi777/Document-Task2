@@ -1,0 +1,49 @@
+.wrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+  color: #fff;
+}
+
+.header {
+  background: rgb(252, 42, 6);
+}
+
+.footer {
+  background: rgb(16, 165, 16);
+}
+
+.main {
+  text-align: left;
+  background: rgb(2, 26, 131);
+}
+
+.aside-1 {
+  background: rgb(141, 132, 3);
+}
+
+.aside-2 {
+  background: rgb(124, 12, 105);
+}
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1 auto; }
+}
+
+@media all and (min-width: 800px) {
+  .main    { flex: 3 0px; }
+  .aside-1 { order: 1; } 
+  .main    { order: 2; }
+  .aside-2 { order: 3; }
+  .footer  { order: 4; }
+}
+
+body {
+  padding: 2em; 
+}
